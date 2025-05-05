@@ -2,6 +2,8 @@ import React from "react";
 import "./Home.scss";
 import PromotionalBanner from "../../Components/Home/PromotionalBanner";
 import ProductCard from "../../Components/Card/Card";
+import images from "../../constants/images";
+import icons from "../../constants/icons";
 
 const sampleProduct = {
   imageUrl:
@@ -16,6 +18,8 @@ const sampleProduct = {
   isNew: true,
 };
 
+const productList = Array(4).fill(sampleProduct);
+
 const Home = () => {
   return (
     <div className="home-page-wrapper">
@@ -24,7 +28,52 @@ const Home = () => {
       </div>
 
       <div className="newarrivals-sections container">
-        <ProductCard product={sampleProduct} />
+        <div className="arrival-detail">
+          <div className="arrivals-title">
+            <img src={icons.flower} alt="flower" />
+            <h2>New Arrival</h2>
+            <img src={icons.flower} alt="flower" />
+          </div>
+          <span>See All</span>
+        </div>
+
+        <div className="products-grid">
+          {productList.map((product, index) => (
+            <ProductCard key={`product-${index}`} product={product} />
+          ))}
+        </div>
+      </div>
+      <div className="newarrivals-sections container">
+        <div className="arrival-detail">
+          <div className="arrivals-title">
+            <img src={icons.flower} alt="flower" />
+            <h2>New Arrival</h2>
+            <img src={icons.flower} alt="flower" />
+          </div>
+          <span>See All</span>
+        </div>
+
+        <div className="products-grid">
+          {productList.map((product, index) => (
+            <ProductCard key={`product-${index}`} product={product} />
+          ))}
+        </div>
+      </div>
+      <div className="newarrivals-sections container">
+        <div className="arrival-detail">
+          <div className="arrivals-title">
+            <img src={icons.flower} alt="flower" />
+            <h2>New Arrival</h2>
+            <img src={icons.flower} alt="flower" />
+          </div>
+          <span>See All</span>
+        </div>
+
+        <div className="products-grid">
+          {productList.map((product, index) => (
+            <ProductCard key={`product-${index}`} product={product} />
+          ))}
+        </div>
       </div>
     </div>
   );

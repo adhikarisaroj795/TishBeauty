@@ -1,3 +1,34 @@
 .promotional-sec {
   background-color: var(--color-primary);
 }
+.arrival-detail {
+  text-align: center;
+  color: #b0a6bd;
+  cursor: pointer;
+}
+
+.arrivals-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gutter);
+  color: black;
+}
+
+.newarrivals-sections {
+  padding-top: 30px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+// If you want a fixed number of columns (e.g., 4) on larger screens:
+@media (min-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
