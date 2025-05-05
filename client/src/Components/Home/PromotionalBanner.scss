@@ -1,0 +1,24 @@
+.promotional-banner-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.promotional-banner-left p {
+  font-size: var(--space-sm);
+  font-weight: 500;
+}
+
+.promotional-banner-left .btn {
+  background-color: var(--color-secondary);
+  padding: 10px 45px;
+  width: auto !important;
+  align-self: start;
+  color: white;
+}
+
+.promotional-banner-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: var(--gutter);
+}

@@ -11,7 +11,9 @@ const Footer = () => {
           <Link>
             <span>Tish</span> <span>Beauty</span>
           </Link>
-          <p>Discover nature's beauty with our natural care products.</p>
+          <p>
+            Discover nature's beauty with <br /> our natural care products.
+          </p>
 
           <ul className="footer-col-1-ul">
             <li className="">

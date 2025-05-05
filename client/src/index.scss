@@ -33,9 +33,9 @@
      ================ */
 :root {
   /* Color System */
-  --color-primary: #ffc0cb;
+  --color-primary: rgba(255, 192, 203, 0.63);
   --color-primary-light: #6ba1ff;
-  --color-secondary: #ef9baa;
+  --color-secondary: rgba(239, 155, 170, 1);
   --color-danger: #ff3333;
   --color-success: #28a745;
   --color-text: #2d3748;
@@ -142,8 +142,8 @@ a:hover {
   max-width: var(--max-width);
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .container--narrow {
