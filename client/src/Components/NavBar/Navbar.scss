@@ -1,0 +1,27 @@
+.header-icon > a > span {
+  font-size: 28px;
+  font-weight: 500;
+  color: #000000;
+}
+.header-icon > a > span:first-of-type {
+  color: var(--color-primary);
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+}
+
+header > nav ul {
+  height: 100%;
+  align-items: center;
+}
+header > nav ul li a {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.header-right {
+  align-items: center;
+}

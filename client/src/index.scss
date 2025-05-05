@@ -33,7 +33,7 @@
      ================ */
 :root {
   /* Color System */
-  --color-primary: #3a86ff;
+  --color-primary: #ffc0cb;
   --color-primary-light: #6ba1ff;
   --color-secondary: #ef9baa;
   --color-danger: #ff3333;
@@ -125,7 +125,7 @@ select {
 }
 
 a {
-  color: var(--color-primary);
+  // color: var(--color-primary);
   text-decoration: none;
   transition: color var(--transition-duration) var(--transition-timing);
 }
@@ -172,7 +172,13 @@ a:hover {
   display: flex;
   gap: var(--gutter);
 }
+.spc-btwn {
+  justify-content: space-between;
+}
 
+.header-height {
+  height: 80px;
+}
 .flex--center {
   align-items: center;
   justify-content: center;
@@ -380,6 +386,13 @@ a:hover {
     padding-left: var(--space-sm);
     padding-right: var(--space-sm);
   }
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 767px) {
