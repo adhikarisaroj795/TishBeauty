@@ -30,15 +30,20 @@ const NavBar = () => {
         <MenuItems navItem={navItem} />
       </nav>
 
-      <div className="header-right flex">
-        <div className="header-right-icon">
-          <img src={icons.search} alt="search" />
+      <div className="header-right-wrapper flex">
+        <div className="nav-bar-login">
+          <button className="btn">Login</button>
         </div>
-        <div className="header-right-icon">
-          <img src={icons.profile} alt="profile" />
-        </div>
-        <div className="header-right-icon">
-          <img src={icons.cart} alt="cart" />
+        <div className="header-right flex">
+          <div className="header-right-icon">
+            <img src={icons.search} alt="search" />
+          </div>
+          <div className="header-right-icon">
+            <img src={icons.profile} alt="profile" />
+          </div>
+          <div className="header-right-icon">
+            <img src={icons.cart} alt="cart" />
+          </div>
         </div>
       </div>
     </header>

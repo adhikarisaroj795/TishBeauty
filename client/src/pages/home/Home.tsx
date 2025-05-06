@@ -71,7 +71,7 @@ const Home = () => {
           </div>
           <span>See All</span>
         </div>
-        {BigDetailCardDetails.map((item, index) => (
+        {BigDetailCardDetails.slice(0, 2).map((item, index) => (
           <DetailsCard
             key={index}
             image={item.image}

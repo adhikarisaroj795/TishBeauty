@@ -29,7 +29,7 @@ const SkinCare = () => {
         <div className="arrival-detail">
           <div className="arrivals-title">
             <img src={icons.flower} alt="flower" />
-            <h2>NEW ARRIVALS</h2>
+            <h2>THE ORDINARY</h2>
             <img src={icons.flower} alt="flower" />
           </div>
           <span>See All</span>
@@ -45,7 +45,7 @@ const SkinCare = () => {
         <div className="arrival-detail">
           <div className="arrivals-title">
             <img src={icons.flower} alt="flower" />
-            <h2>BEST SELLERS</h2>
+            <h2>COSRX</h2>
             <img src={icons.flower} alt="flower" />
           </div>
           <span>See All</span>
@@ -57,11 +57,11 @@ const SkinCare = () => {
           ))}
         </div>
       </div>
-      <div className="newarrivals-sections container">
+      <div className="newarrivals-sections container p-b-40">
         <div className="arrival-detail">
           <div className="arrivals-title">
             <img src={icons.flower} alt="flower" />
-            <h2>BEST SELLERS</h2>
+            <h2>CeraVe</h2>
             <img src={icons.flower} alt="flower" />
           </div>
           <span>See All</span>

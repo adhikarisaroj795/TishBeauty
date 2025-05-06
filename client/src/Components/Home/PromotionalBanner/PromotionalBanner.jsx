@@ -11,7 +11,9 @@ const PromotionalBanner = () => {
         <button className="btn">Shop now</button>
       </div>
       <div className="promotional-banner-right">
-        <img src={images.promotionalbanner} alt="promotionalbanner" />
+        <figure>
+          <img src={images.promotionalbanner} alt="promotionalbanner" />
+        </figure>
       </div>
     </div>
   );

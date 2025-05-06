@@ -25,3 +25,13 @@ header > nav ul li a {
 .header-right {
   align-items: center;
 }
+
+.nav-bar-login {
+  display: flex;
+  align-items: center;
+
+  & .btn {
+    background-color: var(--color-primary);
+    padding: 8px 16px;
+  }
+}

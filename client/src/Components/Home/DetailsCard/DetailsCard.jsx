@@ -7,7 +7,7 @@ const DetailsCard = ({ image, title, description, className }) => {
       <div className="details-card-left">
         <h2>{title}</h2>
         <p>{description}</p>
-        <button className="btn">Shop now</button>
+        <button className="btn">Read more</button>
       </div>
       <div className="details-card-right">
         <div className="details-card-right-img">
