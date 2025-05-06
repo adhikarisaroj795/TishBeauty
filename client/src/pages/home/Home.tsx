@@ -1,9 +1,11 @@
 import React from "react";
 import "./Home.scss";
-import PromotionalBanner from "../../Components/Home/PromotionalBanner";
+import PromotionalBanner from "../../Components/Home/PromotionalBanner/PromotionalBanner";
 import ProductCard from "../../Components/Card/Card";
-import images from "../../constants/images";
 import icons from "../../constants/icons";
+import DetailsCard from "../../Components/Home/DetailsCard/DetailsCard";
+
+import { BigDetailCardDetails } from "../../constants/Constants";
 
 const sampleProduct = {
   imageUrl:
@@ -31,7 +33,7 @@ const Home = () => {
         <div className="arrival-detail">
           <div className="arrivals-title">
             <img src={icons.flower} alt="flower" />
-            <h2>New Arrival</h2>
+            <h2>NEW ARRIVALS</h2>
             <img src={icons.flower} alt="flower" />
           </div>
           <span>See All</span>
@@ -47,7 +49,7 @@ const Home = () => {
         <div className="arrival-detail">
           <div className="arrivals-title">
             <img src={icons.flower} alt="flower" />
-            <h2>New Arrival</h2>
+            <h2>BEST SELLERS</h2>
             <img src={icons.flower} alt="flower" />
           </div>
           <span>See All</span>
@@ -59,22 +61,26 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="newarrivals-sections container">
+
+      <section className="bigcards-container p-b-30 container">
         <div className="arrival-detail">
           <div className="arrivals-title">
             <img src={icons.flower} alt="flower" />
-            <h2>New Arrival</h2>
+            <h2>Blog</h2>
             <img src={icons.flower} alt="flower" />
           </div>
           <span>See All</span>
         </div>
-
-        <div className="products-grid">
-          {productList.map((product, index) => (
-            <ProductCard key={`product-${index}`} product={product} />
-          ))}
-        </div>
-      </div>
+        {BigDetailCardDetails.map((item, index) => (
+          <DetailsCard
+            key={index}
+            image={item.image}
+            title={item.title}
+            description={item.description}
+            className={index % 2 !== 0 ? "row-reverse" : ""}
+          />
+        ))}
+      </section>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import "./PromotionalBanner.scss";
-import images from "../../constants/images";
+import images from "../../../constants/images";
 
 const PromotionalBanner = () => {
   return (
