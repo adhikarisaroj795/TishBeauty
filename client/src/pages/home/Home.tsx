@@ -5,7 +5,8 @@ import ProductCard from "../../Components/Card/Card";
 import icons from "../../constants/icons";
 import DetailsCard from "../../Components/Home/DetailsCard/DetailsCard";
 
-import { BigDetailCardDetails } from "../../constants/Constants";
+import { BigDetailCardDetails, blogDetails } from "../../constants/Constants";
+import BlogCard from "../../Components/Home/BlogCard/BlogCard";
 
 const sampleProduct = {
   imageUrl:
@@ -63,14 +64,14 @@ const Home = () => {
       </div>
 
       <section className="bigcards-container p-b-30 container">
-        <div className="arrival-detail">
+        {/* <div className="arrival-detail">
           <div className="arrivals-title">
             <img src={icons.flower} alt="flower" />
             <h2>Blog</h2>
             <img src={icons.flower} alt="flower" />
           </div>
           <span>See All</span>
-        </div>
+        </div> */}
         {BigDetailCardDetails.slice(0, 2).map((item, index) => (
           <DetailsCard
             key={index}
@@ -80,6 +81,14 @@ const Home = () => {
             className={index % 2 !== 0 ? "row-reverse" : ""}
           />
         ))}
+      </section>
+
+      <section className="home-blog-sec container">
+        <div className="blog-grid">
+          {blogDetails.map((item, index) => (
+            <BlogCard key={index} blog={item} />
+          ))}
+        </div>
       </section>
     </div>
   );

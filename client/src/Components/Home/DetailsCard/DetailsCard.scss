@@ -41,3 +41,23 @@
 .row-reverse {
   flex-direction: row-reverse;
 }
+
+.button-explore span {
+  margin-left: 50px;
+}
+.button-explore span span {
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.button-explore {
+  display: flex;
+  align-items: center;
+
+  & span {
+    display: flex;
+    gap: 10px;
+    font-size: var(--space-sm);
+    font-weight: 600;
+  }
+}
