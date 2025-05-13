@@ -35,7 +35,29 @@
   //   background-color: red;
 }
 .blog-tag span {
-  background-color: red;
+  background-color: #f1f1f1;
+  color: var(--color-secondary);
   padding: 5px;
+  font-weight: 500;
   font-size: var(--space-xs);
+  border-radius: 11px;
+}
+
+.blog-details button {
+  background-color: var(--color-secondary);
+  color: white;
+}
+.blog-details h3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.blog-details p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

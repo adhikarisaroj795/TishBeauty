@@ -83,9 +83,17 @@ const Home = () => {
         ))}
       </section>
 
-      <section className="home-blog-sec container">
+      <section className="home-blog-sec container p-b-40">
+        <div className="arrival-detail">
+          <div className="arrivals-title">
+            <img src={icons.flower} alt="flower" />
+            <h2>Our Blogs</h2>
+            <img src={icons.flower} alt="flower" />
+          </div>
+          <span>See All</span>
+        </div>
         <div className="blog-grid">
-          {blogDetails.map((item, index) => (
+          {blogDetails.slice(0, 3).map((item, index) => (
             <BlogCard key={index} blog={item} />
           ))}
         </div>

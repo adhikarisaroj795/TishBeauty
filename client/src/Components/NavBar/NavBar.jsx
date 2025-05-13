@@ -3,6 +3,7 @@ import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import { navItem } from "../../constants/Constants";
 import icons from "../../constants/icons";
+import AddtoCart from "../AddtoCart/AddtoCart";
 
 const MenuItems = ({ navItem }) => {
   return (
@@ -46,6 +47,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
+      <AddtoCart />
     </header>
   );
 };

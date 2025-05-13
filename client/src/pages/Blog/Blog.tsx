@@ -1,12 +1,13 @@
 import React from "react";
 import "./Blog.scss";
 import icons from "../../constants/icons";
-import { BigDetailCardDetails } from "../../constants/Constants";
-import DetailsCard from "../../Components/Home/DetailsCard/DetailsCard";
+import { blogDetails } from "../../constants/Constants";
+
+import BlogCard from "../../Components/Home/BlogCard/BlogCard";
 
 const Blog = () => {
   return (
-    <div className="blog-page-wrapper">
+    <div className="blog-page-wrapper p-t-30">
       <div className="blog-cards-holder">
         <section className="bigcards-container p-b-30 container">
           <div className="arrival-detail">
@@ -17,15 +18,12 @@ const Blog = () => {
             </div>
             <span>See All</span>
           </div>
-          {BigDetailCardDetails.map((item, index) => (
-            <DetailsCard
-              key={index}
-              image={item.image}
-              title={item.title}
-              description={item.description}
-              className={index % 2 !== 0 ? "row-reverse" : ""}
-            />
-          ))}
+
+          <div className="blog-wrapper">
+            {blogDetails.map((item, index) => (
+              <BlogCard blog={item} key={index} />
+            ))}
+          </div>
         </section>
       </div>
     </div>
