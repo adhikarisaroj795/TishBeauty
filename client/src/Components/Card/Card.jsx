@@ -1,7 +1,15 @@
 import React from "react";
-import "./Card.scss"; // We'll create this CSS file next
+import "./Card.scss";
+
+import { useCart } from "../../context/cart/CartContext";
 
 const ProductCard = ({ product }) => {
+  const { addToCart } = useCart();
+
+  const handleAddToCart = () => {
+    addToCart(product);
+    alert(`${product.name} add to cart!`);
+  };
   const {
     imageUrl,
     brand,
@@ -45,7 +53,7 @@ const ProductCard = ({ product }) => {
           <span className="review-count">({reviewCount})</span>
         </div>
 
-        <button className="add-to-cart-btn">
+        <button className="add-to-cart-btn" onClick={handleAddToCart}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

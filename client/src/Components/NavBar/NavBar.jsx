@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import { navItem } from "../../constants/Constants";
@@ -18,6 +18,14 @@ const MenuItems = ({ navItem }) => {
 };
 
 const NavBar = () => {
+  const [addToCart, setAddToCart] = useState(false);
+
+  console.log(addToCart);
+
+  const handleAddtoCartToggle = () => {
+    setAddToCart((prev) => !prev);
+    console.log("clicked");
+  };
   return (
     <header className="container flex spc-btwn header-height">
       <div className="header-icon">
@@ -43,11 +51,11 @@ const NavBar = () => {
             <img src={icons.profile} alt="profile" />
           </div>
           <div className="header-right-icon">
-            <img src={icons.cart} alt="cart" />
+            <img src={icons.cart} alt="cart" onClick={handleAddtoCartToggle} />
           </div>
         </div>
       </div>
-      <AddtoCart />
+      {addToCart && <AddtoCart closeCart={handleAddtoCartToggle} />}
     </header>
   );
 };
