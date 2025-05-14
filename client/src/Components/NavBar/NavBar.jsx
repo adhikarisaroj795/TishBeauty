@@ -5,6 +5,8 @@ import { navItem } from "../../constants/Constants";
 import icons from "../../constants/icons";
 import AddtoCart from "../AddtoCart/AddtoCart";
 
+import { useCart } from "../../context/cart/CartContext";
+
 const MenuItems = ({ navItem }) => {
   return (
     <ul className="flex">
@@ -19,12 +21,12 @@ const MenuItems = ({ navItem }) => {
 
 const NavBar = () => {
   const [addToCart, setAddToCart] = useState(false);
+  const { getItemsCount, cart } = useCart();
 
   console.log(addToCart);
 
   const handleAddtoCartToggle = () => {
     setAddToCart((prev) => !prev);
-    console.log("clicked");
   };
   return (
     <header className="container flex spc-btwn header-height">
@@ -45,12 +47,19 @@ const NavBar = () => {
         </div>
         <div className="header-right flex">
           <div className="header-right-icon">
-            <img src={icons.search} alt="search" />
+            <Link to={"search"}>
+              <img src={icons.search} alt="search" />
+            </Link>
           </div>
           <div className="header-right-icon">
             <img src={icons.profile} alt="profile" />
           </div>
-          <div className="header-right-icon">
+          <div className="header-right-icon nav-cart">
+            {cart.length === 0 ? (
+              ""
+            ) : (
+              <div className="cart-nav-counter">{getItemsCount}</div>
+            )}
             <img src={icons.cart} alt="cart" onClick={handleAddtoCartToggle} />
           </div>
         </div>

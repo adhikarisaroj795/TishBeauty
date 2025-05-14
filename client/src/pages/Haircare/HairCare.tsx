@@ -3,6 +3,8 @@ import React from "react";
 import ProductCard from "../../Components/Card/Card";
 import icons from "../../constants/icons";
 
+import { hairCareData } from "../../constants/Constants";
+
 const sampleProduct = {
   imageUrl:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXWHlzy6nV3NdhQimm3XgWC3ypSYMVFIMMwg&s",
@@ -32,7 +34,7 @@ const HairCare = () => {
         </div>
 
         <div className="products-grid">
-          {productList.map((product, index) => (
+          {hairCareData.slice(0, 4).map((product, index) => (
             <ProductCard key={`product-${index}`} product={product} />
           ))}
         </div>

@@ -1,15 +1,18 @@
-import React, { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import "./Addtocart.scss";
-import images from "../../constants/images";
 
 import { useCart } from "../../context/cart/CartContext";
 
 const AddtoCart = ({ closeCart }) => {
-  const { cart } = useCart();
+  const {
+    cart,
+    getTotalPrice,
+    decreaseQuantity,
+    removeProduct,
+    increaseQuantity,
+  } = useCart();
 
-  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   return (
     <div className="addtocart-wrapper container">
       <div className="addto-cart-title">
@@ -34,18 +37,27 @@ const AddtoCart = ({ closeCart }) => {
                   <div className="product-cart-increase-decrease flex">
                     <div className="product-cart-increase-decrease-left">
                       <span className="flex cart-counter-holder">
-                        <span className="btn-cart-decrease">
+                        <span
+                          className="btn-cart-decrease"
+                          onClick={() => decreaseQuantity(item.id)}
+                        >
                           <FaMinus />
                         </span>
                         <span className="btn-cart-counter">
                           {item.quantity}
                         </span>
-                        <span className="btn-cart-increase">
+                        <span
+                          className="btn-cart-increase"
+                          onClick={() => increaseQuantity(item.id)}
+                        >
                           <FaPlus />
                         </span>
                       </span>
                     </div>
-                    <div className="product-cart-increase-decrease-right">
+                    <div
+                      className="product-cart-increase-decrease-right"
+                      onClick={() => removeProduct(item.id)}
+                    >
                       <RxCross2 />
                     </div>
                   </div>
@@ -56,7 +68,7 @@ const AddtoCart = ({ closeCart }) => {
           <div className="cart-amount-details">
             <div className="cart-amount-details-row1">
               <div className="cart-amount-details-row1-left">
-                <span>TOTAL</span> <span>Rs 3000</span>
+                <span>TOTAL</span> <span>Rs {getTotalPrice}</span>
               </div>
               <div className="cart-amount-details-row1-left">
                 <span>DISCOUNT</span> <span>10%</span>

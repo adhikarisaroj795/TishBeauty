@@ -3,7 +3,8 @@ import "./Card.scss";
 
 import { useCart } from "../../context/cart/CartContext";
 
-const ProductCard = ({ product }) => {
+const 
+ProductCard = ({ product }) => {
   const { addToCart } = useCart();
 
   const handleAddToCart = () => {
