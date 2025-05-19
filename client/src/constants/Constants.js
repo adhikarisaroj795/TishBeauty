@@ -213,3 +213,74 @@ export const hairCareData = [
     isNew: false,
   },
 ];
+
+export const commentData = [
+  {
+    id: 1,
+    profileImage:
+      "https://beautyprofessor.net/wp-content/uploads/2016/06/team-1.jpg",
+    profileName: "Sophia Carter",
+    hookLine: "Loved the intuitive UI!",
+    commentDescription:
+      "The design is clean, and everything feels snappy. It was a joy to use this product. Looking forward to new features.",
+    randomImage: [
+      "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=400&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu3GK2qMIstSkrYKTBAGZa3rCbRTmKEbb9GQ&s",
+    ],
+
+    rating: 5,
+  },
+  {
+    id: 2,
+    profileImage:
+      "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=80&q=80",
+    profileName: "Liam Nguyen",
+    hookLine: "Solid performance and great support.",
+    commentDescription:
+      "I had a couple of questions, and the support team responded within an hour. The app works flawlessly!",
+    randomImage: [
+      "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=400&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu3GK2qMIstSkrYKTBAGZa3rCbRTmKEbb9GQ&s",
+    ],
+    rating: 4,
+  },
+  {
+    id: 3,
+    profileImage:
+      "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=80&q=80",
+    profileName: "Ava Thompson",
+    hookLine: "Exceeded my expectations.",
+    commentDescription:
+      "Honestly, I didn’t expect much, but the quality and UX blew me away. It's obvious a lot of care went into building this.",
+    randomImage: [
+      "https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=400&q=80",
+    ],
+    rating: 5,
+  },
+  {
+    id: 4,
+    profileImage:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80",
+    profileName: "Noah Kim",
+    hookLine: "Sleek, fast, and reliable.",
+    commentDescription:
+      "This is by far one of the fastest platforms I’ve used. Transitions are smooth, and everything works right out of the box.",
+    randomImage: [
+      "https://images.unsplash.com/photo-1593642634367-d91a135587b5?auto=format&fit=crop&w=400&q=80",
+    ],
+    rating: 4,
+  },
+  {
+    id: 5,
+    profileImage:
+      "https://images.unsplash.com/photo-1593642634367-d91a135587b5?auto=format&fit=crop&w=400&q=80",
+    profileName: "Isabella Martins",
+    hookLine: "A must-have tool for creatives.",
+    commentDescription:
+      "I use this daily in my design workflow. The customization options and attention to detail are top-notch.",
+    randomImage: [
+      "https://images.unsplash.com/photo-1593642634367-d91a135587b5?auto=format&fit=crop&w=400&q=80",
+    ],
+    rating: 5,
+  },
+];

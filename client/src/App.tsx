@@ -9,6 +9,7 @@ import MakeUp from "./pages/MakeUp/MakeUp";
 import SkinCare from "./pages/skincare/SkinCare";
 import Fragnance from "./pages/Fragence/Fragnance";
 import SearchProduct from "./pages/search/SearchProduct";
+import ProductySinglePage from "./Components/ProductySinglePage/ProductySinglePage";
 
 const App: React.FC = () => {
   const router = createBrowserRouter([
@@ -74,6 +75,14 @@ const App: React.FC = () => {
           element: (
             <Suspense fallback={<div>Loading....</div>}>
               <SearchProduct />
+            </Suspense>
+          ),
+        },
+        {
+          path: "product/:id",
+          element: (
+            <Suspense fallback={<div>Loading....</div>}>
+              <ProductySinglePage />
             </Suspense>
           ),
         },

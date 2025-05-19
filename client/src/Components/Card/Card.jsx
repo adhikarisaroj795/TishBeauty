@@ -2,16 +2,19 @@ import React from "react";
 import "./Card.scss";
 
 import { useCart } from "../../context/cart/CartContext";
+import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
-const 
-ProductCard = ({ product }) => {
+const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
 
   const handleAddToCart = () => {
     addToCart(product);
-    alert(`${product.name} add to cart!`);
+
+    toast.success(`${product.name} added to the cart`);
   };
   const {
+    id,
     imageUrl,
     brand,
     name,
@@ -27,10 +30,12 @@ ProductCard = ({ product }) => {
     <div className="product-card">
       {isNew && <div className="product-badge">New</div>}
 
-      <div className="product-image-container">
-        <img src={imageUrl} alt={name} className="product-image" />
-        <button className="quick-view-btn">Quick View</button>
-      </div>
+      <Link to={`/product/${id}`}>
+        <div className="product-image-container">
+          <img src={imageUrl} alt={name} className="product-image" />
+          <button className="quick-view-btn">Quick View</button>
+        </div>
+      </Link>
 
       <div className="product-details">
         <span className="product-brand">{brand}</span>

@@ -29,43 +29,49 @@ const NavBar = () => {
     setAddToCart((prev) => !prev);
   };
   return (
-    <header className="container flex spc-btwn header-height">
-      <div className="header-icon">
-        <Link to={"/"}>
-          <span>Tish </span>
-          <span>Beauty</span>
-        </Link>
-      </div>
-
-      <nav>
-        <MenuItems navItem={navItem} />
-      </nav>
-
-      <div className="header-right-wrapper flex">
-        <div className="nav-bar-login">
-          <button className="btn">Login</button>
+    <div className="header-wrapper">
+      <header className="container flex spc-btwn header-height">
+        <div className="header-icon">
+          <Link to={"/"}>
+            <span>Tish </span>
+            <span>Beauty</span>
+          </Link>
         </div>
-        <div className="header-right flex">
-          <div className="header-right-icon">
-            <Link to={"search"}>
-              <img src={icons.search} alt="search" />
-            </Link>
+
+        <nav>
+          <MenuItems navItem={navItem} />
+        </nav>
+
+        <div className="header-right-wrapper flex">
+          <div className="nav-bar-login">
+            <button className="btn">Login</button>
           </div>
-          <div className="header-right-icon">
-            <img src={icons.profile} alt="profile" />
-          </div>
-          <div className="header-right-icon nav-cart">
-            {cart.length === 0 ? (
-              ""
-            ) : (
-              <div className="cart-nav-counter">{getItemsCount}</div>
-            )}
-            <img src={icons.cart} alt="cart" onClick={handleAddtoCartToggle} />
+          <div className="header-right flex">
+            <div className="header-right-icon">
+              <Link to={"search"}>
+                <img src={icons.search} alt="search" />
+              </Link>
+            </div>
+            <div className="header-right-icon">
+              <img src={icons.profile} alt="profile" />
+            </div>
+            <div className="header-right-icon nav-cart">
+              {cart.length === 0 ? (
+                ""
+              ) : (
+                <div className="cart-nav-counter">{getItemsCount}</div>
+              )}
+              <img
+                src={icons.cart}
+                alt="cart"
+                onClick={handleAddtoCartToggle}
+              />
+            </div>
           </div>
         </div>
-      </div>
-      {addToCart && <AddtoCart closeCart={handleAddtoCartToggle} />}
-    </header>
+        {addToCart && <AddtoCart closeCart={handleAddtoCartToggle} />}
+      </header>
+    </div>
   );
 };
 

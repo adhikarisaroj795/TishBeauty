@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./Layout.scss";
 import NavBar from "../../Components/NavBar/NavBar";

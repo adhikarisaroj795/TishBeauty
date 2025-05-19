@@ -9,6 +9,7 @@ import { BigDetailCardDetails, blogDetails } from "../../constants/Constants";
 import BlogCard from "../../Components/Home/BlogCard/BlogCard";
 
 const sampleProduct = {
+  id: 12345,
   imageUrl:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXWHlzy6nV3NdhQimm3XgWC3ypSYMVFIMMwg&s",
   brand: "PremiumBrand",
