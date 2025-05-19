@@ -53,3 +53,20 @@
 .product-single-page-addtocart-buttons {
   margin-top: 20px;
 }
+
+/* .sliderimg-wrapper {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.sliderimg-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.product-single-page-slider-img-holder {
+  display: flex;
+  overflow: hidden;
+}
