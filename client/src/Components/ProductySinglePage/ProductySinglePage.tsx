@@ -28,7 +28,27 @@ const productList = Array(4).fill(sampleProduct);
 const ProductySinglePage = () => {
   return (
     <div className="product-single-page-wrapper container">
-      <ProductSlider />
+      <div className="singlepage-product-slider-wrapper flex p-t-30 p-b-40">
+        <div className="singlepage-product-slider-wrapper-left">
+          <div className="singpage-slider-left-col1">
+            <ProductSlider />
+          </div>
+        </div>
+        <div className="singlepage-product-slider-wrapper-right">
+          <h3>{sampleProduct.name}</h3>
+          <div className="product-single-rating">
+            {"★".repeat(Math.round(sampleProduct.rating))}
+            {"☆".repeat(5 - Math.round(sampleProduct.rating))}
+            <span className="review-count">({sampleProduct.reviewCount})</span>
+          </div>
+          <span>Rs {sampleProduct.price.toLocaleString()}</span>
+          <p>{sampleProduct.description}</p>
+          <div className="product-single-page-addtocart-buttons">
+            <button className="btn">Add to cart</button>
+            <button className="btn">Add to Favourites</button>
+          </div>
+        </div>
+      </div>
 
       <section className="single-page-comment-section">
         <div className="arrival-detail">

@@ -1,58 +1,57 @@
-import React from "react";
-import images from "../../constants/images";
+import React, { useRef } from "react";
+
 import "./ProductSlider.css";
 import { sliderImages } from "../../constants/Constants";
-
-const sampleProduct = {
-  imageUrl:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXWHlzy6nV3NdhQimm3XgWC3ypSYMVFIMMwg&s",
-  brand: "PremiumBrand",
-  name: "Elegant Comfort Sneakers - Summer Edition",
-  price: 3000,
-  originalPrice: 3500,
-  description:
-    "A gel moisturizer packed with glow-boosting Cherry Blossom Extracts, visibly brightening niacinamide, and hydrating betaine from sugar beets. Advanced with glycerin and Cherry Blossom flavanoids with visibly soothing and moisturizing benefits for skin that’s ready for makeup! Dermatologist tested.",
-  discount: 18,
-  rating: 4.5,
-  reviewCount: 128,
-  isNew: true,
-};
+import {
+  Splide,
+  SplideSlide,
+  Splide as SplideType,
+} from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+import images from "../../constants/images";
 
 const ProductSlider = () => {
+  const splideRef = useRef<SplideType>(null);
+
+  const handleThumbnailClick = (index: number) => {
+    if (splideRef.current) {
+      splideRef.current.splide.go(index);
+    }
+  };
   return (
-    <div className="ProductSinglePage-slider flex">
-      <div className="ProductSinglePage-slider-left">
-        <div className="product-single-page-slider-img-holder">
-          {sliderImages.map((image, index) => (
-            <div className="sliderimg-wrapper">
-              <img src={image} alt={`Product view ${index + 1}`} />
-            </div>
+    <div className="product-slider-wrapper">
+      <div className="product-image-holder">
+        <Splide
+          ref={splideRef}
+          options={{
+            type: "slide", // or "fade" for a smoother transition
+            perPage: 1, // Show only 1 image at a time
+            perMove: 1, // Move 1 image at a time
+            arrows: true, // Show navigation arrows
+            pagination: true, // Show pagination dots
+            rewind: true, // Loop back to the first slide
+          }}
+        >
+          {sliderImages.map((img, index) => (
+            <SplideSlide key={index}>
+              <div className="product-slider-img">
+                <img src={img} alt={`product view ${index + 1}`} />
+              </div>
+            </SplideSlide>
           ))}
-        </div>
-        <div className="product-single-page-small-photos-holder">
-          {[1, 2, 3, 4, 5].map((item) => (
-            <div key={item} className="product-single-page-small-img">
-              <img
-                src={images.productimage2}
-                alt={`Product thumbnail ${item}`}
-              />
-            </div>
-          ))}
-        </div>
+        </Splide>
       </div>
-      <div className="ProductSinglePage-slider-right">
-        <h3>{sampleProduct.name}</h3>
-        <div className="product-single-rating">
-          {"★".repeat(Math.round(sampleProduct.rating))}
-          {"☆".repeat(5 - Math.round(sampleProduct.rating))}
-          <span className="review-count">({sampleProduct.reviewCount})</span>
-        </div>
-        <span>Rs {sampleProduct.price.toLocaleString()}</span>
-        <p>{sampleProduct.description}</p>
-        <div className="product-single-page-addtocart-buttons">
-          <button className="btn">Add to cart</button>
-          <button className="btn">Add to Favourites</button>
-        </div>
+
+      <div className="product-small-imageholder flex">
+        {sliderImages.map((img, index) => (
+          <div
+            className="product-small-img-slider"
+            key={index}
+            onClick={() => handleThumbnailClick(index)}
+          >
+            <img src={img} alt={`Thumbnail ${index + 1}`} />
+          </div>
+        ))}
       </div>
     </div>
   );
