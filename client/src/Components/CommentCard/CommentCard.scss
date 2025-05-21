@@ -1,0 +1,38 @@
+.comemnt-card-profile {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.comemnt-card-profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.comment-card-right h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.comment-card-right p {
+  color: #697586;
+}
+.comment-post-img {
+  width: 250px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comment-post-img-holder {
+  display: flex;
+  gap: var(--gutter);
+}
+.comment-post-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.comment-card-wrapper {
+  margin: 25px 0;
+}

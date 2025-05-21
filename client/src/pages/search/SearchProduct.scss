@@ -1,0 +1,106 @@
+.search-page-wrapper section {
+  display: flex;
+  padding-bottom: 40px;
+}
+
+.searchProduct-left {
+  flex: 0 0 20%;
+}
+
+.searchproduct-third-sort input {
+  height: 10px;
+  border: 1px solid red;
+  padding: 10px;
+  background-color: red;
+}
+.search-price-holder input {
+  max-width: 70px;
+}
+.search-price-holder {
+  display: flex;
+  gap: 5px;
+}
+.search-price-holder > svg {
+  font-size: 4px;
+}
+.search-price-holder input {
+  padding: 2px 4px;
+}
+.search-price-holder button {
+  padding: 2px 4px;
+  border: none;
+  background-color: var(--color-primary);
+  border-radius: 4px;
+}
+.searchProduct-right {
+  flex: 1;
+}
+.search-product-products-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+}
+
+@media (min-width: 1200px) {
+  .search-product-products-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+.search-page-wrapper h3 {
+  margin: 10px 0px;
+  text-transform: uppercase;
+}
+.search-page-wrapper ul li {
+  margin-bottom: 5px;
+  color: #787779;
+}
+.searchproduct-third-sort input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #007bff;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.searchproduct-third-sort label {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.searchproduct-third-sort {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+
+  // margin-bottom: 10px;
+}
+
+.search-sort-holder {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.searchproduct__search {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.searchproduct__search input {
+  width: 100%;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid #787779;
+  padding: 8px 20px;
+  font-size: 1.2rem;
+}
+
+.searchproduct__search img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.searchProduct-third {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,9 @@
+/* Center the error page */
+.error-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+  padding: 20px;
+}
